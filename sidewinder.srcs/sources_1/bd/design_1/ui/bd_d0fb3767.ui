@@ -1,0 +1,75 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-581,-206",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port qsfp0_clk -pg 1 -lvl 6 -x 1580 -y 320 -defaultsOSRD -right
+preplace port qsfp1_clk -pg 1 -lvl 6 -x 1580 -y 630 -defaultsOSRD -right
+preplace port qsfp0_gt -pg 1 -lvl 6 -x 1580 -y 300 -defaultsOSRD
+preplace port qsfp1_gt -pg 1 -lvl 6 -x 1580 -y 610 -defaultsOSRD
+preplace port port-id_init_clk -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port port-id_reset_100mhz -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace port port-id_eth0_channel_up -pg 1 -lvl 6 -x 1580 -y 460 -defaultsOSRD
+preplace port port-id_eth1_channel_up -pg 1 -lvl 6 -x 1580 -y 810 -defaultsOSRD
+preplace port port-id_button -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace inst ch0_ethernet -pg 1 -lvl 4 -x 1130 -y 260 -swap {5 1 2 3 4 14 6 7 8 9 10 11 12 13 0 15 16 17 18 19 21 20 24 23 22} -defaultsOSRD -pinDir eth_gt right -pinY eth_gt 40R -pinDir gt_ref_clk right -pinY gt_ref_clk 60R -pinDir ETH_TX_STREAM left -pinY ETH_TX_STREAM 0L -pinDir ETH_RX_STREAM right -pinY ETH_RX_STREAM 0R -pinDir reset_100mhz left -pinY reset_100mhz 200L -pinDir init_clk left -pinY init_clk 180L -pinDir channel_up right -pinY channel_up 200R -pinBusDir data_resetn right -pinBusY data_resetn 100R -pinDir data_clk right -pinY data_clk 80R
+preplace inst ch1_ethernet -pg 1 -lvl 4 -x 1130 -y 590 -swap {5 1 2 3 4 8 6 7 0 9 10 11 12 13 14 15 16 17 18 19 21 20 23 24 22} -defaultsOSRD -pinDir eth_gt right -pinY eth_gt 20R -pinDir gt_ref_clk right -pinY gt_ref_clk 40R -pinDir ETH_RX_STREAM right -pinY ETH_RX_STREAM 0R -pinDir ETH_TX_STREAM left -pinY ETH_TX_STREAM 0L -pinDir reset_100mhz left -pinY reset_100mhz 40L -pinDir init_clk left -pinY init_clk 20L -pinDir channel_up right -pinY channel_up 220R -pinDir data_clk right -pinY data_clk 240R -pinBusDir data_resetn right -pinBusY data_resetn 160R
+preplace inst eth0_ila -pg 1 -lvl 5 -x 1450 -y 180 -defaultsOSRD -pinDir SLOT_0_AXIS left -pinY SLOT_0_AXIS 0L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L
+preplace inst eth1_ila -pg 1 -lvl 5 -x 1450 -y 690 -defaultsOSRD -pinDir SLOT_0_AXIS left -pinY SLOT_0_AXIS 0L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L
+preplace inst rdmx_xmit_0 -pg 1 -lvl 3 -x 760 -y 180 -defaultsOSRD -pinDir AXIS_TX right -pinY AXIS_TX 0R -pinDir S_AXI left -pinY S_AXI 110L -pinDir src_clk left -pinY src_clk 170L -pinDir src_resetn left -pinY src_resetn 190L -pinDir dst_clk right -pinY dst_clk 20R -pinDir packet_data_fifo_full right -pinY packet_data_fifo_full 40R
+preplace inst data_consumer_0 -pg 1 -lvl 5 -x 1450 -y 60 -defaultsOSRD -pinDir AXIS_RX left -pinY AXIS_RX 0L -pinDir clk left -pinY clk 20L
+preplace inst data_consumer_1 -pg 1 -lvl 5 -x 1450 -y 380 -defaultsOSRD -pinDir AXIS_RX left -pinY AXIS_RX 0L -pinDir clk left -pinY clk 20L
+preplace inst button -pg 1 -lvl 1 -x 170 -y 390 -defaultsOSRD -pinDir CLK left -pinY CLK 0L -pinDir PIN left -pinY PIN 20L -pinDir Q right -pinY Q 0R
+preplace inst rdmx_xmit_1 -pg 1 -lvl 3 -x 760 -y 470 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 44 43} -defaultsOSRD -pinDir AXIS_TX right -pinY AXIS_TX 0R -pinDir S_AXI left -pinY S_AXI 0L -pinDir src_clk left -pinY src_clk 20L -pinDir src_resetn left -pinY src_resetn 40L -pinDir dst_clk right -pinY dst_clk 40R -pinDir packet_data_fifo_full right -pinY packet_data_fifo_full 20R
+preplace inst reset_inverter -pg 1 -lvl 1 -x 170 -y 530 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 0L -pinBusDir Res right -pinBusY Res 0R
+preplace inst fill_ram_0 -pg 1 -lvl 2 -x 470 -y 290 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 36 37 35} -defaultsOSRD -pinDir M_AXI right -pinY M_AXI 0R -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L -pinDir start left -pinY start 0L
+preplace inst fill_ram_1 -pg 1 -lvl 2 -x 470 -y 430 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 36 37 35} -defaultsOSRD -pinDir M_AXI right -pinY M_AXI 40R -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L -pinDir start left -pinY start 0L
+preplace netloc ch0_ethernet_gt_txusrclk2 1 3 2 N 200 1300
+preplace netloc ch0_ethernet_rx_resetn 1 4 1 1340 240n
+preplace netloc ch1_ethernet_tx_resetn 1 4 1 N 750
+preplace netloc clock_1 1 0 4 20 470 340 530 580 570 940
+preplace netloc eth0_channel_up 1 4 2 NJ 460 NJ
+preplace netloc eth1_channel_up 1 4 2 NJ 810 NJ
+preplace netloc reset_in_1 1 0 4 20 590 NJ 590 NJ 590 960
+preplace netloc tx_clk_1 1 3 2 N 510 1340
+preplace netloc button_2 1 0 1 NJ 410
+preplace netloc button_1_Q 1 1 1 320 290n
+preplace netloc reset_inverter_Res 1 1 2 360 550 600
+preplace netloc Conn5 1 4 2 NJ 610 NJ
+preplace netloc Conn7 1 4 2 NJ 300 NJ
+preplace netloc ch0_ethernet_ETH_RX_STREAM 1 4 1 1320 60n
+preplace netloc ch1_ethernet_ETH_RX_STREAM 1 4 1 1320 380n
+preplace netloc fill_ram_0_M_AXI 1 2 1 N 290
+preplace netloc fill_ram_1_M_AXI 1 2 1 N 470
+preplace netloc qsfp0_clk_1 1 4 2 NJ 320 NJ
+preplace netloc qsfp1_clk_1 1 4 2 NJ 630 NJ
+preplace netloc rdmx_xmit_0_AXIS_TX 1 3 2 960 180 NJ
+preplace netloc rdmx_xmit_1_AXIS_TX 1 3 2 920 530 1300
+levelinfo -pg 1 0 170 470 760 1130 1450 1580
+pagesize -pg 1 -db -bbox -sgen -160 0 1760 880
+",
+   "No Loops_ScaleFactor":"0.685068",
+   "No Loops_TopLeft":"-149,-51",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port qsfp0_clk -pg 1 -lvl 0 -x -360 -y 150 -defaultsOSRD
+preplace port qsfp0_tx -pg 1 -lvl 3 -x 470 -y 100 -defaultsOSRD
+preplace port qsfp0_rx -pg 1 -lvl 0 -x -360 -y 190 -defaultsOSRD
+preplace port port-id_clock -pg 1 -lvl 0 -x -360 -y -60 -defaultsOSRD
+preplace port port-id_reset_in -pg 1 -lvl 0 -x -360 -y -40 -defaultsOSRD
+preplace inst aurora_64b66b_0 -pg 1 -lvl 2 -x 240 -y 190 -defaultsOSRD
+preplace inst reset_manager -pg 1 -lvl 1 -x -210 -y -40 -defaultsOSRD
+preplace netloc clock_1 1 0 1 -340J -60n
+preplace netloc reset_in_1 1 0 1 -340J -40n
+preplace netloc GT_DIFF_REFCLK1_0_1 1 0 2 NJ 150 N
+preplace netloc aurora_64b66b_0_GT_SERIAL_TX 1 2 1 N 100
+preplace netloc GT_SERIAL_RX_0_1 1 0 2 NJ 190 N
+levelinfo -pg 1 -360 -210 240 470
+pagesize -pg 1 -db -bbox -sgen -480 -120 580 380
+"
+}
+0

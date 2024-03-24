@@ -1,0 +1,53 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-420,-198",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_init_clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_button -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_dest0_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_dest0_pulse -pg 1 -lvl 3 -x 440 -y 60 -defaultsOSRD
+preplace port port-id_dest1_clk -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_dest1_pulse -pg 1 -lvl 3 -x 440 -y 200 -defaultsOSRD
+preplace inst button -pg 1 -lvl 1 -x 100 -y 140 -defaultsOSRD -pinDir CLK left -pinY CLK 0L -pinDir PIN left -pinY PIN 20L -pinDir Q right -pinY Q 0R
+preplace inst xpm_cdc_gen_0 -pg 1 -lvl 2 -x 310 -y 60 -swap {1 0 2 3} -defaultsOSRD -pinDir src_clk left -pinY src_clk 20L -pinDir dest_clk left -pinY dest_clk 0L -pinDir src_pulse left -pinY src_pulse 40L -pinDir dest_pulse right -pinY dest_pulse 0R
+preplace inst xpm_cdc_gen_1 -pg 1 -lvl 2 -x 310 -y 200 -swap {0 2 1 3} -defaultsOSRD -pinDir src_clk left -pinY src_clk 0L -pinDir dest_clk left -pinY dest_clk 40L -pinDir src_pulse left -pinY src_pulse 20L -pinDir dest_pulse right -pinY dest_pulse 0R
+preplace netloc button_Q2 1 1 1 200 100n
+preplace netloc clock_1 1 0 2 20 80 180
+preplace netloc PIN_0_1 1 0 1 NJ 160
+preplace netloc ch0_ethernet_gt_txusrclk2 1 0 2 NJ 60 NJ
+preplace netloc xpm_cdc_gen_0_dest_pulse 1 2 1 NJ 60
+preplace netloc tx_clk_1 1 0 2 NJ 240 NJ
+preplace netloc xpm_cdc_gen_1_dest_pulse 1 2 1 NJ 200
+levelinfo -pg 1 0 100 310 440
+pagesize -pg 1 -db -bbox -sgen -120 0 580 300
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-422,-200",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_init_clk -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port port-id_button -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_dest0_clk -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_dest0_pulse -pg 1 -lvl 3 -x 430 -y 70 -defaultsOSRD
+preplace port port-id_dest1_clk -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_dest1_pulse -pg 1 -lvl 3 -x 430 -y 220 -defaultsOSRD
+preplace inst button -pg 1 -lvl 1 -x 100 -y 150 -defaultsOSRD
+preplace inst xpm_cdc_gen_0 -pg 1 -lvl 2 -x 300 -y 70 -defaultsOSRD
+preplace inst xpm_cdc_gen_1 -pg 1 -lvl 2 -x 300 -y 220 -defaultsOSRD
+preplace netloc button_Q2 1 1 1 190 90n
+preplace netloc clock_1 1 0 2 20 80 180
+preplace netloc PIN_0_1 1 0 1 NJ 160
+preplace netloc ch0_ethernet_gt_txusrclk2 1 0 2 NJ 70 NJ
+preplace netloc xpm_cdc_gen_0_dest_pulse 1 2 1 NJ 70
+preplace netloc tx_clk_1 1 0 2 NJ 220 NJ
+preplace netloc xpm_cdc_gen_1_dest_pulse 1 2 1 NJ 220
+levelinfo -pg 1 0 100 300 430
+pagesize -pg 1 -db -bbox -sgen -120 0 560 290
+"
+}
+
